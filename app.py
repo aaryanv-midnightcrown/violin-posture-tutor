@@ -1,3 +1,18 @@
+import os
+import urllib.request
+
+# Automatically download task models if they don't exist
+MODELS = {
+    'hand_landmarker.task': 'https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task',
+    'pose_landmarker.task': 'https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_heavy/float16/1/pose_landmarker_heavy.task'
+}
+
+for filename, url in MODELS.items():
+    if not os.path.exists(filename):
+        print(f"Downloading {filename}...")
+        urllib.request.urlretrieve(url, filename)
+        print(f"{filename} downloaded successfully.")
+
 import cv2
 import numpy as np
 import mediapipe as mp

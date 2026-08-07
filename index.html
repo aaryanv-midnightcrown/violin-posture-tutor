@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violin Posture & Bow Hold Tutor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Video & HUD Overlay Stack -->
+        <div class="video-wrapper">
+            <video id="webcam" autoplay playsinline></video>
+            <canvas id="output_canvas"></canvas>
+        </div>
+
+        <!-- Dedicated Bottom Dashboard Panel -->
+        <div class="dashboard-panel">
+            <div class="metric-card">
+                <span class="metric-label">ELBOW JOINT ANGLE</span>
+                <span id="angle-display" class="metric-value">-- deg</span>
+            </div>
+            <div class="metric-card">
+                <span class="metric-label">POSTURE EVALUATION</span>
+                <span id="status-display" class="metric-value status-neutral">Awaiting Camera...</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MediaPipe Vision Tasks CDN Script -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>
