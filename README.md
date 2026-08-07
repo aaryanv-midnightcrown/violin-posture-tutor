@@ -6,7 +6,7 @@ A real-time computer vision application that monitors violin bowing posture and 
 
 ### Option 1: Live Web App (No Installation)
 Try the web version directly in your browser:
-**[Launch Web App](https://YOUR_GITHUB_USERNAME.github.io/violin-posture-tutor/)**
+**[Launch Web App](https://aaryanv-midnightcrown.github.io/violin-posture-tutor/)**
 
 ---
 
